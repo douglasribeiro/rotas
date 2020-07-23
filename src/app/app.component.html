@@ -9,10 +9,14 @@
     <li class="nav-item">
       <a routerLinkActive="active" routerLink="/curso" class="nav-link" >Curso</a>
     </li>
+    <li class="nav-item">
+      <a routerLinkActive="active" [routerLink]="['curso', idCurso.value]" class="nav-link" >Curso Detalhe</a>
+    </li>
   </ul>
 </nav>
 <br>
 <div class="container-fluid">
+  <input #idCurso type="text" class="form-control" placeholder="Codigo curso">
   <router-outlet></router-outlet>
 </div>
 
