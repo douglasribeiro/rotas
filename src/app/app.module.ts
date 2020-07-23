@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 //import { CursoNaoEncontradoComponent } from './curso/curso-nao-encontrado/curso-nao-encontrado.component';
 import { AppRoutingModule } from './app.routing.module';
 import { CursoModule } from './curso/curso.module';
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CursoModule } from './curso/curso.module';
     BrowserModule,
     AppRoutingModule,
     CursoModule,
+    AlunosModule,
     AppRoutingModule
     //routing
   ],
