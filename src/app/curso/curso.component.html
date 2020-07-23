@@ -1,3 +1,8 @@
-<p>Entre com Id do curso</p>
-
-<!--input #idCurso type="text" class="form-control" placeholder="Codigo curso"-->
+<ul class="list-group">
+  <div>
+  <a *ngFor="let curso of cursos"
+    [routerLink]="['/curso', curso.id]" >
+    {{ curso.nome }}
+  </a>
+  </div>
+</ul>
