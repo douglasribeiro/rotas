@@ -9,9 +9,9 @@
     <li class="nav-item">
       <a routerLinkActive="active" routerLink="/curso" [queryParams]="{pagina:1}" class="nav-link" >Curso</a>
     </li>
-    <li class="nav-item">
+    <!--li class="nav-item">
       <a routerLinkActive="active" [routerLink]="['curso', idCurso.value]" class="nav-link" >Curso Detalhe</a>
-    </li>
+    </li-->
     <li class="nav-item">
       <a routerLinkActive="active" routerLink="/alunos" class="nav-link" >Alunos</a>
     </li>
@@ -19,7 +19,7 @@
 </nav>
 <br>
 <div class="container-fluid">
-  <input #idCurso type="text" class="form-control" placeholder="Codigo curso">
+  <!--input #idCurso type="text" class="form-control" placeholder="Codigo curso"-->
   <router-outlet></router-outlet>
 </div>
 
