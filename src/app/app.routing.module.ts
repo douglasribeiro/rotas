@@ -7,8 +7,9 @@ import { LoginComponent } from './login/login.component';
 const appRoutes: Routes = [
   { path: 'curso' , loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule)},
   { path: 'alunos', loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule)},
-  { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent }
+
+  { path: 'home', component: HomeComponent },
+  { path: '', component: LoginComponent }
 ]
 
 @NgModule({
