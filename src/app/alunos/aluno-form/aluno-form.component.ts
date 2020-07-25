@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { AlunosService } from '../alunos.service';
+import { IFormCanDeactivate } from 'src/app/guards/iform-candeactive';
 
 
 
@@ -10,7 +11,7 @@ import { AlunosService } from '../alunos.service';
   templateUrl: './aluno-form.component.html',
   styleUrls: ['./aluno-form.component.css']
 })
-export class AlunoFormComponent implements OnInit {
+export class AlunoFormComponent implements OnInit, IFormCanDeactivate {
 
   aluno: any;
   inscricao: Subscription;
