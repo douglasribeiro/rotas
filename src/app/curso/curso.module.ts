@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { CursoRoutingModule } from './curso.routing.module';
 //import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [
     CursoComponent,
