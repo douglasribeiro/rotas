@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Usuario } from './usuario';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-login',

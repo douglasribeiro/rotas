@@ -3,13 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard.';
 
 const appRoutes: Routes = [
-  { path: 'curso' , loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule)},
-  { path: 'alunos', loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule)},
+  { path: 'curso' ,
+    loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule),
+    canActivate: [AuthGuard]},
+  { path: 'alunos',
+    loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule),
+    canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent },
+  { path: '', component: HomeComponent,
+    canActivate: [AuthGuard] },
 
-  { path: 'home', component: HomeComponent },
-  { path: '', component: LoginComponent }
 ]
 
 @NgModule({
